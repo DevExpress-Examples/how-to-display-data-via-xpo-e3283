@@ -31,8 +31,14 @@ Namespace DXGrid_BindingToXPODataSource
                 Return
             End If
             Using uow As New UnitOfWork()
-                Dim pdo1 As New ProductDataObject(uow) With {.ProductName = "Product A", .UnitPrice = 99}
-                Dim pdo2 As New ProductDataObject(uow) With {.ProductName = "Product B", .UnitPrice = 199}
+                Dim pdo1 As New ProductDataObject(uow) With { _
+                    .ProductName = "Product A", _
+                    .UnitPrice = 99 _
+                }
+                Dim pdo2 As New ProductDataObject(uow) With { _
+                    .ProductName = "Product B", _
+                    .UnitPrice = 199 _
+                }
                 uow.CommitChanges()
             End Using
         End Sub
